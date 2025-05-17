@@ -1,0 +1,76 @@
+:root {
+  font-family: "Coming Soon", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  background: transparent;
+  padding: 1rem 1rem;
+  margin: 0 1rem;
+  transition: all .5s ease;
+  color: black;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  outline: none;
+  border-radius: 255px 35px 404px 52px/25px 215px 35px 225px;
+  font-family: "Coming Soon", cursive;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+}
+
+button.left { 
+  border: 3px solid black;
+}
+
+button.right {
+  border: 3px solid black;
+  border-radius: 25px 255px 35px 255px/145px 40px 235px 60px;
+
+}
+
+button:hover {
+  box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+
+.box-section {
+  border: 3px black solid;
+  border-radius: 225px 43px 384px 60px/39px 195px 45px 205px;
+}
+/*Some styles to use */
+border: 3px black solid;
+border-radius: 225px 43px 384px 60px/39px 195px 45px 205px;
