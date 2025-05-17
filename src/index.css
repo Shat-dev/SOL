@@ -69,6 +69,11 @@ button:hover {
 
 .box-section {
   border: 3px black solid;
+  border-radius: 214px 50px 354px 50px/45px 155px 55px 185px;
+}
+
+.box-section-top {
+  border: 3px black solid;
   border-radius: 225px 43px 384px 60px/39px 195px 45px 205px;
 }
 /*Some styles to use */

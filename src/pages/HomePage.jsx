@@ -7,7 +7,7 @@ export function HomePage() {
       <link rel="icon" type="image/svg+xml" href="/y2k-favicon.svg" />
       <div className='Webpage'>
         <div className="top-bar">
-            <div className="top-bar-content">
+            <div className="top-bar-content box-section-top">
               <button className="left">Twitter</button>
               <button className="left">Telegram</button>
               <div className="ticker-name">$SOL</div>
