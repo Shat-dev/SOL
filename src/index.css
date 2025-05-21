@@ -57,6 +57,7 @@ button.left {
   border: 3px solid black;
 }
 
+
 button.right {
   border: 3px solid black;
   border-radius: 25px 255px 35px 255px/145px 40px 235px 60px;
@@ -65,6 +66,10 @@ button.right {
 
 button:hover {
   box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+
+button.left:active, button.right:active {
+  transform: translateY(10px); /* Moves the button down */
 }
 
 .box-section {
@@ -76,6 +81,79 @@ button:hover {
   border: 3px black solid;
   border-radius: 225px 43px 384px 60px/39px 195px 45px 205px;
 }
+.box-section-SOL {
+  border: 3px black solid;
+  border-radius: 29px 150px 54px 150px/145px 55px 155px 85px;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  padding: 2rem;
+}
+
+.hover-zone {
+  position: absolute;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hover-zone:hover {
+  transform: scale(1.1);
+}
+
+.hover-word {
+  position: relative;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0 ease;
+  
+  font-size: 1.2rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+.hover-zone:hover .hover-word {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.box-section-SOL .headers {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.box-section-SOL .headers p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.box-section-SOL .content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.box-section-SOL:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.box-section-SOL img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+.box-section-SOL p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
 /*Some styles to use */
 border: 3px black solid;
 border-radius: 225px 43px 384px 60px/39px 195px 45px 205px;
+
