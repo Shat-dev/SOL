@@ -22,11 +22,19 @@
     width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
     padding: 2rem;
     background-color: white;
+}
+
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
 }
 
 .ticker-name {
@@ -38,7 +46,8 @@
 
 .contract-address {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .middle-section {

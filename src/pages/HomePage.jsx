@@ -48,14 +48,16 @@ export function HomePage() {
       <div className="Webpage">
         <div className="top-bar">
           <div className="top-bar-content box-section-top">
-            <button className="left">Twitter</button>
-            <button className="left">Telegram</button>
-            <div className="ticker-name">$SOL</div>
-            <button className="right">Contract</button>
-            <button className="right">Dexscreener</button>
-          </div>
-          <div className="contract-address">
-            CA: 6ogzHhzdrQr9Pgv6hZ2MNze7UrzBMAFyBBWUYp1Fhitx
+            <div className="top-buttons">
+              <button className="left">Twitter</button>
+              <button className="left">Telegram</button>
+              <div className="ticker-name">$SOL</div>
+              <button className="right">Contract</button>
+              <button className="right">Dexscreener</button>
+            </div>
+            <div className="contract-address">
+              CA: 6ogzHhzdrQr9Pgv6hZ2MNze7UrzBMAFyBBWUYp1Fhitx
+            </div>
           </div>
         </div>
 
