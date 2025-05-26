@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 export function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
-  const images = ['/Finalonec.png', '/Finalone.png', '/Flipped2.png', '/Flipped1.png'];
+  const images = ['/Finalonec.png', '/Finalone.png', '/Finalonec.png', '/Flipped2.png', '/Flipped1.png', '/Flipped2.png'];
 
   useEffect(() => {
     const interval = setInterval(() => {
