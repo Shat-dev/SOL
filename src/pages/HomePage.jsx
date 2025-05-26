@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 
 export function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
-  const images = ['/Finalone.png', '/Finalonec.png'];
-  const flippedImages = ['/Flipped1.png', '/Flipped2.png'];
+  const images = [ '/Finalonec.png', '/Finalone.png', '/Flipped2.png','/Flipped1.png'];
+  const flippedImages = ['/Flipped2.png', '/Flipped1.png', '/Finalonec.png','/Finalone.png'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +23,7 @@ export function HomePage() {
           const row = Math.floor(index / 6);
           const isFlippedRow = row % 2 === 1;
           const currentImages = isFlippedRow ? flippedImages : images;
-          
+
           return (
             <div
               key={index}
@@ -68,7 +68,7 @@ export function HomePage() {
             </div>
             <div className="below-header-text">
               <p>
-              Built on the very chain that gave rise to some of the most toxic, bigoted, and unhinged characters in crypto, $SOL is pure satire—a tokenized middle finger to the racist degenerates polluting the Solana ecosystem. Solana promised innovation; instead, it delivered a front-row seat to chaos. This isn't a project. It's not financial advice. It's a mirror—held up to the worst parts of a hilariously broken community. If you're offended, chances are, this was made for you.
+                $SOL represents the worst of us. Solana promised innovation, instead, it gave rise to the most toxic, racist, and unhinged individuals in crypto. This isn't a project. It's not financial advice. It's a coin that shows the worst parts of a hilariously broken community. If you're not offended, chances are this coin was made for you.
               </p>
             </div>
           </div>
