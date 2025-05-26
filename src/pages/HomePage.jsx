@@ -15,8 +15,8 @@ export function HomePage() {
 
   return (
     <>
-      <title>Sol trader</title>
-      <link rel="icon" type="image/svg+xml" href="/y2k-favicon.svg" />
+      <title>$SOL</title>
+      <link rel="icon" type="image/svg+xml" href="/Finalone.png" />
       <div className="background-container">
         {[...Array(30)].map((_, index) => (
           <div
@@ -71,9 +71,6 @@ export function HomePage() {
             </div>
             <HoverZones />
           </div>
-        </div>
-        <div className="bottom-section">
-          <div className='bottom-section-content box-section-SOL'></div>
         </div>
       </div>
     </>
