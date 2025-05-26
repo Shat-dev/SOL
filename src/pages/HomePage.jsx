@@ -4,8 +4,7 @@ import { useState, useEffect } from 'react';
 
 export function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
-  const images = [ '/Finalonec.png', '/Finalone.png', '/Flipped2.png','/Flipped1.png'];
-  const flippedImages = ['/Flipped2.png', '/Flipped1.png', '/Finalonec.png','/Finalone.png'];
+  const images = ['/Finalonec.png', '/Finalone.png', '/Flipped2.png', '/Flipped1.png'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,31 +18,25 @@ export function HomePage() {
       <title>Sol trader</title>
       <link rel="icon" type="image/svg+xml" href="/y2k-favicon.svg" />
       <div className="background-container">
-        {[...Array(30)].map((_, index) => {
-          const row = Math.floor(index / 6);
-          const isFlippedRow = row % 2 === 1;
-          const currentImages = isFlippedRow ? flippedImages : images;
-
-          return (
-            <div
-              key={index}
-              className="background-image"
-              style={{
-                backgroundImage: `url(${currentImages[currentImage]})`,
-                top: `${Math.floor(index / 6) * 20}%`,
-                left: `${(index % 6) * 16.66}%`,
-                width: '15%',
-                height: '18%',
-                position: 'absolute',
-                backgroundSize: 'contain',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                margin: '1%',
-                zIndex: -1
-              }}
-            />
-          );
-        })}
+        {[...Array(30)].map((_, index) => (
+          <div
+            key={index}
+            className="background-image"
+            style={{
+              backgroundImage: `url(${images[currentImage]})`,
+              top: `${Math.floor(index / 6) * 20}%`,
+              left: `${(index % 6) * 16.66}%`,
+              width: '15%',
+              height: '18%',
+              position: 'absolute',
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              margin: '1%',
+              zIndex: -1
+            }}
+          />
+        ))}
       </div>
       <div className="Webpage">
         <div className="top-bar">
