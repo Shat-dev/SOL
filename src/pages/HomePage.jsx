@@ -67,9 +67,16 @@ export function HomePage() {
           </div>
           <div className='middle-section-content box-section-SOL'>
             <div className='headers'>
-              <p>This is Solana</p>
+              <p>Diabolical tickers</p>
             </div>
             <HoverZones />
+          </div>
+          <div className="bottom-section">
+            <div className='bottom-section-content box-section-SOL'>
+              <div className='headers'>
+                <p>Solana Lore</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
