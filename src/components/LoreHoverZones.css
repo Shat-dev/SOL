@@ -1,0 +1,49 @@
+.lore-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.lore-hover-zone {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.lore-hover-zone:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.lore-hover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+  transition: opacity 0.5s ease 0.5s;
+}
+
+.lore-hover-zone:hover .lore-hover-image {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.lore-hover-zone:not(:hover) .lore-hover-image {
+  opacity: 0;
+  transition: opacity 0.5s ease 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

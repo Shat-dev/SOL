@@ -1,5 +1,6 @@
 import './HomePage.css';
 import { HoverZones } from '../components/HoverZones';
+import { LoreHoverZones } from '../components/LoreHoverZones';
 import { useState, useEffect } from 'react';
 
 export function HomePage() {
@@ -17,16 +18,16 @@ export function HomePage() {
     <>
       <title>$SOL</title>
       <link rel="icon" type="image/svg+xml" href="/Finalone.png" />
-      <div className="background-container">
-        {[...Array(30)].map((_, index) => (
+      <div className="background-container" style={{ marginLeft: '-1%' }}>
+        {[...Array(25)].map((_, index) => (
           <div
             key={index}
             className="background-image"
             style={{
               backgroundImage: `url(${images[currentImage]})`,
-              top: `${Math.floor(index / 6) * 20}%`,
-              left: `${(index % 6) * 16.66}%`,
-              width: '15%',
+              top: `${Math.floor(index / 5) * 20}%`,
+              left: `${(index % 5) * 20}%`,
+              width: '18%',
               height: '18%',
               position: 'absolute',
               backgroundSize: 'contain',
@@ -61,20 +62,17 @@ export function HomePage() {
             </div>
             <div className="below-header-text">
               <p>
-                $SOL represents the worst of us. Solana promised innovation, instead, it gave rise to the most toxic, racist, and unhinged individuals in crypto. This isn't a project. It's not financial advice. It's a coin that shows the worst parts of a hilariously broken community. If you're not offended, chances are this coin was made for you.
+                $SOL represents the worst of us. Solana promised innovation, instead, it gave rise to the most toxic and racist fucks in crypto. This isn't a project. It's not financial advice. It's a coin that shows the worst parts of Solana. If you're not offended, chances are this coin was made for you.
               </p>
             </div>
-          </div>
-          <div className='middle-section-content box-section-SOL'>
-            <div className='headers'>
-              <p>Diabolical tickers</p>
-            </div>
-            <HoverZones />
           </div>
           <div className="bottom-section">
             <div className='bottom-section-content box-section-SOL'>
               <div className='headers'>
                 <p>Solana Lore</p>
+              </div>
+              <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+                <LoreHoverZones />
               </div>
             </div>
           </div>
