@@ -66,6 +66,30 @@ export function HomePage() {
               </p>
             </div>
           </div>
+          <div className='middle-section-content box-section-SOL'>
+            <div className='headers'>
+              <p>This is Solana</p>
+            </div>
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'center', 
+              alignItems: 'center', 
+              height: '400px',
+              position: 'relative'
+            }}>
+              <img 
+                src={images[currentImage]} 
+                alt="Solana" 
+                style={{
+                  maxWidth: '80%',
+                  maxHeight: '80%',
+                  objectFit: 'contain',
+                  transition: 'opacity 0.3s ease'
+                }}
+              />
+            </div>
+            <HoverZones />
+          </div>
           <div className="bottom-section">
             <div className='bottom-section-content box-section-SOL'>
               <div className='headers'>
