@@ -6,9 +6,6 @@ import { useState, useEffect } from 'react';
 export function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
   const images = ['/Finalonec.png', '/Finalone.png', '/Finalonec.png', '/Flipped2.png', '/Flipped1.png', '/Flipped2.png'];
-  <img src={`${import.meta.env.BASE_URL}images/pic.png`} />
-
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage(prev => (prev + 1) % images.length);
@@ -19,7 +16,6 @@ export function HomePage() {
   return (
     <>
       <title>$SOL</title>
-      <img src={`${import.meta.env.BASE_URL}images/pic.png`} />
       <link rel="icon" type="image/svg+xml" href="/Finalone.png" />
       <div className="background-container" style={{ marginLeft: '-1%' }}>
         {[...Array(25)].map((_, index) => (
