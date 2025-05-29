@@ -42,6 +42,8 @@ const loreImages = [
 export function LoreHoverZones() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const totalPositions = 50; // 5 rows × 10 columns
+  <img src={`${import.meta.env.BASE_URL}images/pic.png`} />
+
 
   return (
     <div className="lore-container">
