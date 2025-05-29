@@ -6,7 +6,7 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/SOL"> {/* ✅ Set base path for GitHub Pages */}
+    <BrowserRouter> {/* ✅ Set base path for GitHub Pages */}
       <App />
     </BrowserRouter>
   </StrictMode>

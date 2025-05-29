@@ -5,13 +5,22 @@ import { useState, useEffect } from 'react';
 
 export function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
+  const [copied, setCopied] = useState(false);
   const images = ['/Finalonec.png', '/Finalone.png', '/Finalonec.png', '/Flipped2.png', '/Flipped1.png', '/Flipped2.png'];
+  const contractAddress = '6ogzHhzdrQr9Pgv6hZ2MNze7UrzBMAFyBBWUYp1Fhitx';
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage(prev => (prev + 1) % images.length);
     }, 500);
     return () => clearInterval(interval);
   }, []);
+
+  const handleCopyAddress = () => {
+    navigator.clipboard.writeText(contractAddress);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <>
@@ -47,9 +56,15 @@ export function HomePage() {
               <div className="ticker-name">$SOL</div>
               <button className="right">Contract</button>
               <button className="right">Dexscreener</button>
+              <button 
+                className={`mobile-copy-button ${copied ? 'success' : ''}`}
+                onClick={handleCopyAddress}
+              >
+                {copied ? 'Copied!' : 'Copy CA'}
+              </button>
             </div>
             <div className="contract-address">
-              CA: 6ogzHhzdrQr9Pgv6hZ2MNze7UrzBMAFyBBWUYp1Fhitx
+              <span className="desktop-address">CA: {contractAddress}</span>
             </div>
           </div>
         </div>
