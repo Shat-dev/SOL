@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 export function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
   const [copied, setCopied] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 400);
   const images = ['/Finalonec.png', '/Finalone.png', '/Finalonec.png', '/Flipped2.png', '/Flipped1.png', '/Flipped2.png', '/Finalonec.png'];
   const contractAddress = '6ogzHhzdrQr9Pgv6hZ2MNze7UrzBMAFyBBWUYp1Fhitx';
 
@@ -15,6 +16,15 @@ export function HomePage() {
       setCurrentImage(prev => (prev + 1) % images.length);
     }, 500);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 400);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleCopyAddress = () => {
@@ -103,7 +113,7 @@ export function HomePage() {
                 }}
               />
             </div>
-            <HoverZones />
+            {isMobile ? <HoverWords2 /> : <HoverZones />}
           </div>
           <div className="bottom-section">
             <div className='bottom-section-content box-section-SOL'>

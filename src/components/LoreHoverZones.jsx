@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './LoreHoverZones.css';
 
 const loreImages = [
@@ -40,36 +40,47 @@ const loreImages = [
 ];
 
 export function LoreHoverZones() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const totalPositions = 50; // 5 rows × 10 columns
-  <img src={`${import.meta.env.BASE_URL}images/pic.png`} />
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 400);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Generate random positions across the container
+  const getRandomPosition = () => {
+    return {
+      position: 'absolute',
+      top: `${Math.random() * 80 + 20}%`,
+      left: `${Math.random() * 90 + 5}%`,
+      transform: `translate(-50%, -50%) rotate(${Math.random() * 40 - 20}deg)`
+    };
+  };
+
+  // Use fewer images on mobile
+  const imagesToShow = isMobile ? loreImages.slice(0, Math.ceil(loreImages.length / 2)) : loreImages;
 
   return (
-    <div className="lore-container">
-      {[...Array(totalPositions)].map((_, index) => {
-        const imageIndex = index % loreImages.length;
-        return (
-          <div 
-            key={index} 
-            className='lore-hover-zone'
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-            style={{
-              top: `${Math.floor(index / 10) * 20}%`,
-              left: `${(index % 10) * 10}%`
-            }}
-          >
-            {hoveredIndex === index && (
-              <img 
-                src={loreImages[imageIndex]} 
-                alt="Solana Lore" 
-                className='lore-hover-image'
-              />
-            )}
-          </div>
-        );
-      })}
+    <div style={{ position: 'absolute', width: '100%', height: '100%', pointerEvents: 'none' }}>
+      {imagesToShow.map((image, index) => (
+        <img
+          key={index}
+          src={image}
+          alt="Solana Lore"
+          style={{
+            ...getRandomPosition(),
+            width: isMobile ? '100px' : '150px',
+            height: 'auto',
+            opacity: 1,
+            objectFit: 'contain',
+            padding: isMobile ? '0.3rem' : '0.5rem'
+          }}
+        />
+      ))}
     </div>
   );
 } 
