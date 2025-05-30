@@ -96,10 +96,10 @@ export function HomePage() {
                 src={images[currentImage]} 
                 alt="Solana" 
                 style={{
-                  maxWidth: '80%',
-                  maxHeight: '80%',
+                  maxWidth: '60%',
+                  maxHeight: '60%',
                   objectFit: 'contain',
-                  transition: 'opacity 0.3s ease'
+                  marginTop: 180,
                 }}
               />
             </div>
