@@ -2,17 +2,14 @@ import React from 'react';
 import { hoverWords2 } from '../data/hoverWords2';
 
 export function HoverWords2() {
-  // Generate random positions in a circular pattern around the center
-  const getRandomPosition = (index) => {
-    const angle = (index / hoverWords2.length) * 2 * Math.PI;
-    const radius = 35 + Math.random() * 15; // Distance from center
-    const x = 50 + radius * Math.cos(angle);
-    const y = 50 + radius * Math.sin(angle);
-    
+  // Generate truly random positions across the entire container
+  const getRandomPosition = () => {
     return {
       position: 'absolute',
-      left: `${x}%`,
-      top: `${y}%`,
+      // Generate random top and left positions within a safe range (e.g., 5% to 95%)
+      top: `${Math.random() * 90 + 5}%`,
+      left: `${Math.random() * 90 + 5}%`,
+      // Random rotation
       transform: `translate(-50%, -50%) rotate(${Math.random() * 40 - 20}deg)`
     };
   };
@@ -23,8 +20,8 @@ export function HoverWords2() {
         <div
           key={index}
           style={{
-            ...getRandomPosition(index),
-            fontSize: '1.2rem',
+            ...getRandomPosition(), // Use a new random position for each word
+            fontSize: '1.5rem',
             color: '#2a2a2a',
             opacity: 0.75,
             whiteSpace: 'nowrap',
