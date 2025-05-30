@@ -1,6 +1,7 @@
 import './HomePage.css';
 import { HoverZones } from '../components/HoverZones';
 import { LoreHoverZones } from '../components/LoreHoverZones';
+import { HoverWords2 } from '../components/HoverWords2';
 import { useState, useEffect } from 'react';
 
 export function HomePage() {
@@ -128,9 +129,11 @@ export function HomePage() {
                 style={{
                   maxWidth: '60%',
                   maxHeight: '60%',
-                  objectFit: 'contain'
+                  objectFit: 'contain',
+                  marginTop: 180
                 }}
               />
+              <HoverWords2 />
             </div>
           </div>
         </div>
