@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 export function HomePage() {
   const [currentImage, setCurrentImage] = useState(0);
   const [copied, setCopied] = useState(false);
-  const images = ['/Finalone.png', '/Finalone.png', '/Finalone.png', '/Flipped2.png', '/Flipped1.png', '/Flipped2.png'];
+  const images = ['/Finalonec.png', '/Finalone.png', '/Finalonec.png', '/Flipped2.png', '/Flipped1.png', '/Flipped2.png', '/Finalonec.png'];
   const contractAddress = '6ogzHhzdrQr9Pgv6hZ2MNze7UrzBMAFyBBWUYp1Fhitx';
 
   useEffect(() => {
@@ -113,27 +113,6 @@ export function HomePage() {
               <div style={{ position: 'relative', width: '100%', height: '400px' }}>
                 <LoreHoverZones />
               </div>
-            </div>
-          </div>
-          <div className='middle-section-content box-section-SOL'>
-            <div style={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              height: '400px',
-              position: 'relative'
-            }}>
-              <img 
-                src="/Finalone.png"
-                alt="Solana" 
-                style={{
-                  maxWidth: '60%',
-                  maxHeight: '60%',
-                  objectFit: 'contain',
-                  marginTop: 180
-                }}
-              />
-              <HoverWords2 />
             </div>
           </div>
         </div>
