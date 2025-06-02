@@ -9,7 +9,7 @@ export function HomePage() {
   const [copied, setCopied] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 400);
   const images = ['/Finalonec.png', '/Finalone.png', '/Finalonec.png', '/Flipped2.png', '/Flipped1.png', '/Flipped2.png', '/Finalonec.png'];
-  const contractAddress = '6ogzHhzdrQr9Pgv6hZ2MNze7UrzBMAFyBBWUYp1Fhitx';
+  const contractAddress = '6MrrL4UXAqvnqWYieyk39J94CZH5W1xs7ePCvkR4pump';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,11 +62,19 @@ export function HomePage() {
         <div className="top-bar">
           <div className="top-bar-content box-section-top">
             <div className="top-buttons">
-              <button className="left">Twitter</button>
-              <button className="left">Telegram</button>
+              <a href="https://x.com/soltraderxyz" target="_blank" rel="noopener noreferrer">
+                <button className="left">Twitter</button>
+              </a>
+              <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+                <button className="left">Telegram</button>
+              </a>
               <div className="ticker-name">$SOL</div>
-              <button className="right">Contract</button>
-              <button className="right">Dexscreener</button>
+              <a href="https://solscan.io/token/6MrrL4UXAqvnqWYieyk39J94CZH5W1xs7ePCvkR4pump" target="_blank" rel="noopener noreferrer">
+                <button className="right">Contract</button>
+              </a>
+              <a href="https://dexscreener.com/solana" target="_blank" rel="noopener noreferrer">
+                <button className="right">Dexscreener</button>
+              </a>
               <button 
                 className={`mobile-copy-button ${copied ? 'success' : ''}`}
                 onClick={handleCopyAddress}
