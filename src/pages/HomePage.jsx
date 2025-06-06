@@ -65,7 +65,7 @@ export function HomePage() {
               <a href="https://x.com/soltraderxyz" target="_blank" rel="noopener noreferrer">
                 <button className="left">Twitter</button>
               </a>
-              <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/solthisis" target="_blank" rel="noopener noreferrer">
                 <button className="left">Telegram</button>
               </a>
               <div className="ticker-name">$SOL</div>
