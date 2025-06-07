@@ -9,7 +9,7 @@ export function HomePage() {
   const [copied, setCopied] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 400);
   const images = ['/Finalonec.png', '/Finalone.png', '/Finalonec.png', '/Flipped2.png', '/Flipped1.png', '/Flipped2.png', '/Finalonec.png'];
-  const contractAddress = '6MrrL4UXAqvnqWYieyk39J94CZH5W1xs7ePCvkR4pump';
+  const contractAddress = 'rrL4UXAqvnqWYieyk39J94CZH5W1xs7ePCvkR4pump';
 
   useEffect(() => {
     const interval = setInterval(() => {
