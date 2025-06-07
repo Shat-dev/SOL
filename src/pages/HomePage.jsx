@@ -9,7 +9,7 @@ export function HomePage() {
   const [copied, setCopied] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 400);
   const images = ['/Finalonec.png', '/Finalone.png', '/Finalonec.png', '/Flipped2.png', '/Flipped1.png', '/Flipped2.png', '/Finalonec.png'];
-  const contractAddress = 'pump';
+  const contractAddress = '6DKqgPjq9Y14QxgCTGFG2pYDFFJ53d47SiMRYnE1pump';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -69,7 +69,7 @@ export function HomePage() {
                 <button className="left">Telegram</button>
               </a>
               <div className="ticker-name">$SOL</div>
-              <a href="https://solscan.io/token/6MrrL4UXAqvnqWYieyk39J94CZH5W1xs7ePCvkR4pump" target="_blank" rel="noopener noreferrer">
+              <a href="https://solscan.io/token/6DKqgPjq9Y14QxgCTGFG2pYDFFJ53d47SiMRYnE1pump" target="_blank" rel="noopener noreferrer">
                 <button className="right">Contract</button>
               </a>
               <a href="https://dexscreener.com/solana" target="_blank" rel="noopener noreferrer">
